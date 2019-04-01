@@ -81,7 +81,7 @@ public class ZonkyPrintScheduledJobTest {
     public void printEmptyLoans() throws JsonProcessingException {
         mockRestTemplateResponse(null, "https://api.zonky.cz/loans/marketplace");
 
-        zonkyPrintScheduledJob.printNewLoans();
+        zonkyPrintScheduledJob.printAllLoans();
 
         verifyZeroInteractions(loansPrinter);
     }
